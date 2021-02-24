@@ -1,0 +1,72 @@
+﻿@model VentasViewModel
+
+
+    <h4>Venta</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                @*<div class="form-group">
+                    <label asp-for="VentaCabecera.Fecha" class="control-label"></label>
+                    <input asp-for="VentaCabecera.Fecha" class="form-control" id="FechaHoy" />
+                    <span asp-validation-for="VentaCabecera.Fecha" class="text-danger"></span>
+                </div>*@
+
+                <div class="form-group" style="display:none">
+                    <label asp-for="VentaCabecera.IdCliente" class="control-label"></label>
+                    <input asp-for="VentaCabecera.IdCliente" class="form-control" />
+                </div>
+
+                <div class="form-group d-flex" id="MenuBusqueda">
+                    <label class="control-label">Cliente: </label>
+
+                    <div id="ListaClientes">
+                        <input class="form-group ml-3" id="ClienteBusqueda" autocomplete="false" />
+                        <div id="Resultados" class="ml-3 mt-0 pt-0" autocomplete="false">
+                            <span asp-validation-for="VentaCabecera.IdCliente" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VentaCabecera.Observaciones" class="control-label"></label>
+                    <input asp-for="VentaCabecera.Observaciones" class="form-control" />
+                    <span asp-validation-for="VentaCabecera.Observaciones" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Producto</label>
+            <input type="text" name="producto" id="ProductoID" value="" style="display:none" autocomplete="off" />
+            <input type="text" id="BuscaProducto" />
+            <div id="ResultadoProductos"></div>
+        </div>
+        <div class="col-md-4">
+            <label>Cantidad</label>
+            <input type="text" name="Cantidad" id="CantidadID" value="" />
+        </div>
+        <div class="col-md-4">
+            <input type="button" name="btnAgregar" onclick="addProducto()" value="Agregar" />
+        </div>
+    </div>
+
+    <div class="row" id="ListadoProductos"></div>
+
+    
+
+
+
+

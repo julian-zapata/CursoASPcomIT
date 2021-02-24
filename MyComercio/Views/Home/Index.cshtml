@@ -2,7 +2,70 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="text-center p-2" id="welcome">
+        <h1 class="display-3">Bienvenidos al Curso .Net Core</h1>
+        <h2 class="display-4">Diserta el profe Ariel</h2>
+    </div>
+
+    <section id="logos"> @*Logos de las tecnologias que aprendemos*@
+        <div class="row pt-2 pb-2">
+            <div class="col-4">
+                <img src="https://www.fixedbuffer.com/wp-content/uploads/2019/06/reflexion.png" class="rounded float-start" alt="C#" height="280">
+            </div>
+            <div class="col-4">
+                <img src="https://www.programandoamedianoche.com/wp-content/uploads/2008/09/asp.net_.logo_.png" class="rounded" alt="ASP" height="300" width="350">
+            </div>
+            <div class="col-4">
+                <img src="https://www.fixedbuffer.com/wp-content/uploads/2019/10/NetCore3.png" class="rounded float-end" alt=".NET" height="300">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="p-4"  id="contenidos">
+            <h3><ins>CONTENIDO</ins></h3>
+            <div class="row" id="contenidos">
+                <div class="col-3" id="contenido-lista">
+                    <ul>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">
+                                <i class="fas fa-users"></i> Clientes
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ciudad" asp-action="Index">
+                                <i class="fas fa-city"></i> Ciudad
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Index">
+                                <i class="fas fa-cube"></i> <label> </label> Producto
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Marca" asp-action="Index">
+                                <i class="fas fa-paperclip"></i> <label> </label> Marca
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-9" > 
+                    <p class="" id="contenido-parrafo" >
+                        En estas clases se ha aprendido de todo un poco.<br />
+                        Empezamos viendo HTML y CSS acompañado con Bootstrap, un framework que permite crear 
+                        interfaces web con CSS y JavaScript, cuya particularidad es la de adaptar la interfaz 
+                        del sitio web al tamaño del dispositivo al que se vincula.<br />
+                        Seguimos con Git y GitHub que son controladores de versiones locales y remotas respectivamente.<br />
+                        Continuamos con el lenguaje de programación C# y el patron de diseño MVC. <br />
+                        Todo esto volcado al IDE Visual Studio Community y Entity Framework para generar una aplicacion web 
+                        y agilizar procesos de desarrollo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </div>
